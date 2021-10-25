@@ -1,0 +1,37 @@
+<div class="login">
+	<div class="login__box">
+		<div class="login__panel">
+			<div class="login__form">
+				<div class="login__title">
+					Hola!
+				</div>
+				<div class="login__input">
+					<label>
+						Dirección de correo electrónico
+					</label>
+					<input [(ngModel)]="user" type="text" placeholder="Dirección de correo electrónico">
+				</div>
+				<div class="login__input">
+					<label>
+						Contraseña
+					</label>
+					<input (keyup.enter)="login()" [(ngModel)]="pass" type="password" placeholder="Contraseña">
+				</div>
+				<div class="login__button">
+					<button (click)="login()">login</button>
+				</div>
+				<div class="login__error">
+					<span *ngIf="error">
+						*Datos incorrectos
+					</span>
+				</div>
+				<div class="login__logo">
+					<img src="./assets/img/icon.png" alt="logo">
+				</div>
+			</div>
+		</div>
+		<div class="login__panel">
+			<img src="./assets/img/login-image.jpeg" alt="imagen de inicio">
+		</div>
+	</div>
+</div>
